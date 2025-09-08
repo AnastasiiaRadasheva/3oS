@@ -6,6 +6,7 @@
     <RootNamespace>_3oS</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>_3oS.StartClass</StartupObject>
   </PropertyGroup>
 
 </Project>

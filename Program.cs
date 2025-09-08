@@ -64,36 +64,70 @@ namespace _3oS
 
 
             //Esimine ül
-            ArvuTootlus arvutaja = new ArvuTootlus();
+            //ArvuTootlus arvutaja = new ArvuTootlus();
 
-            Random rnd1 = new Random();
+            //Random rnd1 = new Random();
 
-            int start = rnd1.Next(-100, 101);
-            int end = rnd1.Next(-100, 101);
+            //int start = rnd1.Next(-100, 101);
+            //int end = rnd1.Next(-100, 101);
 
-            int length = end - start + 1;
-            int[] ruudud = new int[length];
+            //int length = end - start + 1;
+            //int[] ruudud = new int[length];
 
-            for (int i = 0; i < length; i++)
-            {
-                int number = start + i;
-                ruudud[i] = number * number;
-                Console.WriteLine($"{number} → {ruudud[i]}");
+            //for (int i = 0; i < length; i++)
+            //{
+            //    int number = start + i;
+            //    ruudud[i] = number * number;
+            //    Console.WriteLine($"{number} → {ruudud[i]}");
 
+            ////}
+            //Console.OutputEncoding = Encoding.UTF8;
+
+            //Random random = new Random();
+            //int N = random.Next(-100, 101);
+            //int M = random.Next(-100, 101);
+            //int[] arvud;
+
+            //if (N > M)
+            //{
+            //    arvud = ArvuTootlus.Arvude_massiv(N, M);
+            //}
+            //else
+            //{
+            //    arvud = ArvuTootlus.Arvude_massiv(N, M);
+            //}
+            //foreach (int item in arvud)
+            //{
+            //    Console.WriteLine(item * item);
             }
-            ////            //teine ül Viie arvu analüüs
-            ////            Анализ пяти чисел
+        ////            //teine ül Viie arvu analüüs
+        ////            Анализ пяти чисел
 
-            ////    Задача:
-            ////    Создайте метод AnalüüsiArve(double[] arvud), который:
+        ////    Задача:
 
-            ////    принимает в качестве входа массив(пользователь вводит с помощью метода Tekstist_arvud()),
 
-            ////    возвращает Tuple<double, double, double> – сумму, среднее значение, произведение,
+        int[] numbers = new int[5];
+        double[] arvud = ArvuTootlus.Tekstist_arvud();
+        var tulemus = ArvuTootlus.AnalüüsiArve(arvud);
+        Console.WriteLine($"Summ: {tulemus.Item1}, Kesk: {tulemus.Item2}, Korrus: {tulemus.Item3}");
 
-            ////    выводит результат в хорошо отформатированном виде.
+            //3. Имена и возрасты
 
-            Random rnd = new Random();
+////Задача:
+////Создайте класс Человек { string Имя; int Возраст;
+////    }.
+////Создайте метод Статистика(List<Человек> люди), который:
+
+////    вычисляет сумму всех возрастов и средний возраст,
+
+////    находит самого старшего и самого молодого человека,
+
+////    возвращает эти значения Tuple<int, double, Человек, Человек>.
+
+////Пользователь вводит 5 человек (имя и возраст отдельно).
+///
+
+
 
 
             ////            12 – Поиск наибольшего числа
@@ -110,22 +144,22 @@ namespace _3oS
 
             ////    Использует цикл for.
 
-            int[] nums = { 12, 56, 78, 2, 90, 43, 88, 67 };
+            //int[] nums = { 12, 56, 78, 2, 90, 43, 88, 67 };
 
-            int maxValue = nums[0];
-            int maxIndex = 0;
+            //int maxValue = nums[0];
+            //int maxIndex = 0;
 
-            for (int i = 1; i < nums.Length; i++)
-            {
-                if (nums[i] > maxValue)
-                {
-                    maxValue = nums[i];
-                    maxIndex = i;
-                }
-            }
+            //for (int i = 1; i < nums.Length; i++)
+            //{
+            //    if (nums[i] > maxValue)
+            //    {
+            //        maxValue = nums[i];
+            //        maxIndex = i;
+            //    }
+            //}
 
-            Console.WriteLine($" : {maxValue}");
-            Console.WriteLine($"  : {maxIndex}");
+            //Console.WriteLine($" : {maxValue}");
+            //Console.WriteLine($"  : {maxIndex}");
 
             //13 
 //            13 – Четные и нечетные числа
@@ -142,11 +176,7 @@ namespace _3oS
 //        Подсчитать, сколько чисел больше 50
 
 //    Используйте поочередно for, foreach и while
-            for (int i = 0; i < 20; i++)
-            {
-                nimed.Add(Convert.ToString(rnd.Next(1, 20)));
 
-            }
         }
     }
 }
