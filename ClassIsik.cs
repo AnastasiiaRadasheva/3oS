@@ -12,8 +12,7 @@ namespace _3oS
         public string perenimi;
         public int synniaasta=2000;
 
-        public ClassIsik() { 
-        }
+        public ClassIsik() {}
         public ClassIsik(string eesnimi, string perenimi)
         {
             this.eesnimi = eesnimi;
@@ -25,4 +24,5 @@ namespace _3oS
 
         }
     }
+
 }

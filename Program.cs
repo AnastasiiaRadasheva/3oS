@@ -7,65 +7,146 @@ namespace _3oS
     {
         public static void Main(string[] args)
         {
+            //Random rnd = new Random();
+            //Console.OutputEncoding = Encoding.UTF8;
+            //Console.BackgroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.DarkGreen;
+            ////3.osa List
+            //List<string> nimed = new List<string>();
 
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine($"{i + 1}, Nimi:");
+            //    nimed.Add(Console.ReadLine());
+            //}
+            //foreach (string nimi in nimed)
+            //{
+            //    Console.WriteLine(nimi);
+            //}
+            //int[] arvud = new int[5];
+            //int j = 0;
+            //while (j < 5)
+            //{
+            //    Console.WriteLine(j + 1);
+            //    arvud[j] = rnd.Next(1, 101);
+            //    j++;
+
+            //}
+            //foreach (int arv in arvud)
+            //{
+            //    Console.WriteLine(arv);
+            //}
+
+            //List<ClassIsik> isikud = new List<ClassIsik>();
+            //j = 0;
+            //do
+            //{
+            //    Console.WriteLine(j + 1);
+            //    ClassIsik isik = new ClassIsik();
+            //    Console.WriteLine("Eesnimi: ");
+            //    isik.eesnimi = Console.ReadLine();
+            //    Console.WriteLine("perenimi: ");
+            //    isik.perenimi = Console.ReadLine();
+            //    isikud.Add(isik);//list
+            //    j++;
+            //}
+            //while (j < 5);
+            //isikud.Sort((x, y) => x.eesnimi.CompareTo(y.eesnimi));
+            //Console.WriteLine(isikud.Count);
+            //foreach (ClassIsik isik in isikud)
+            //{
+
+            //    isik.Prindi_admed();
+
+            //}
+
+            //Console.WriteLine($"Kolmandal kohal on {isikud[2].eesnimi} {isikud[2].perenimi}");
+
+
+            //Esimine ül
+            ArvuTootlus arvutaja = new ArvuTootlus();
+
+            Random rnd1 = new Random();
+
+            int start = rnd1.Next(-100, 101);
+            int end = rnd1.Next(-100, 101);
+
+            int length = end - start + 1;
+            int[] ruudud = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                int number = start + i;
+                ruudud[i] = number * number;
+                Console.WriteLine($"{number} → {ruudud[i]}");
+
+            }
+            ////            //teine ül Viie arvu analüüs
+            ////            Анализ пяти чисел
+
+            ////    Задача:
+            ////    Создайте метод AnalüüsiArve(double[] arvud), который:
+
+            ////    принимает в качестве входа массив(пользователь вводит с помощью метода Tekstist_arvud()),
+
+            ////    возвращает Tuple<double, double, double> – сумму, среднее значение, произведение,
+
+            ////    выводит результат в хорошо отформатированном виде.
+
             Random rnd = new Random();
-            //3.osa List
-            List<string> nimed = new List<string>();
 
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i + 1}, Nimi:");
-                nimed.Add(Console.ReadLine());
-            }
-            foreach (string nimi in nimed)
-            {
-                Console.WriteLine(nimi);
-            }
-            int[] arvud = new int[5];
-            int j = 0;
-            while (j<5)
-            {
-                Console.WriteLine(j+1);
-                arvud [j] = rnd.Next(1,101);
-                j++;
 
-            }
-            foreach (int arv in arvud)
-            {
-                Console.WriteLine(arv);
-            }
+            ////            12 – Поиск наибольшего числа
 
-            List<ClassIsik> isikud = new List<ClassIsik>();
-            j = 0;
-            do
-            {
-                Console.WriteLine(j + 1);
-                ClassIsik isik = new ClassIsik();
-                Console.WriteLine("Eesnimi: ");
-                isik.eesnimi = Console.ReadLine();
-                Console.WriteLine("perenimi: ");
-                isik.perenimi = Console.ReadLine();
-                isikud.Add(isik);//list
-                j++;
-            }
-            while (j < 5);
-            isikud.Sort((x, y) => x.eesnimi.CompareTo(y.eesnimi));
-            Console.WriteLine(isikud.Count);
-            foreach (ClassIsik isik in isikud)
-            {
+            ////            Дано:
 
-                isik.Prindi_admed();
+            ////int[] числа = { 12, 56, 78, 2, 90, 43, 88, 67 };
 
+            ////            Напишите программу, которая:
+
+            ////    Находит наибольшее число в массиве(без использования Max()).
+
+            ////    Выводит индекс этого числа, а не только его значение.
+
+            ////    Использует цикл for.
+
+            int[] nums = { 12, 56, 78, 2, 90, 43, 88, 67 };
+
+            int maxValue = nums[0];
+            int maxIndex = 0;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] > maxValue)
+                {
+                    maxValue = nums[i];
+                    maxIndex = i;
+                }
             }
 
-            Console.WriteLine($"Kolmandal kohal on {isikud[2].eesnimi} {isikud[2].perenimi}");
+            Console.WriteLine($" : {maxValue}");
+            Console.WriteLine($"  : {maxIndex}");
 
+            //13 
+//            13 – Четные и нечетные числа
 
+//Сгенерируйте List<int> из 20 случайных целых чисел.
+//Используйте циклы, чтобы:
 
+//    Вычислить:
 
+//            Сумму парных чисел
+
+//            Среднее значение непарных чисел
+
+//        Подсчитать, сколько чисел больше 50
+
+//    Используйте поочередно for, foreach и while
+            for (int i = 0; i < 20; i++)
+            {
+                nimed.Add(Convert.ToString(rnd.Next(1, 20)));
+
+            }
         }
     }
 }
